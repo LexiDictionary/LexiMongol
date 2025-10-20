@@ -1238,7 +1238,7 @@ directionBtns.forEach(btn => {
     searchInput.value = '';
     resultsContainer.innerHTML = `<div class="about-section" id="aboutSection">
       <div class="section-title">About</div>
-      <p class="about-content">LexiMongol is a bilingual learner's dictionary for English and Mongolian speakers.</p>
+      <p class="about-content">bla blabla bla</p>
     </div>`;
   });
 });
@@ -1250,7 +1250,7 @@ searchInput.addEventListener('input', () => {
   } else {
     resultsContainer.innerHTML = `<div class="about-section" id="aboutSection">
       <div class="section-title">About</div>
-      <p class="about-content">LexiMongol is a bilingual learner's dictionary for English and Mongolian speakers.</p>
+      <p class="about-content">bla blabla bla</p>
     </div>`;
   }
 });
