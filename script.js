@@ -1164,7 +1164,7 @@ function generateExercise() {
 
   const questionText = currentDirection === 'en-mn'
     ? `What is the English word for: "${question}"?`
-    : `What is the Mongolian translation of: "${question}"?`;
+    : `What is the Mongolian word for: "${question}"?`;
 
   exerciseModal.querySelector('.modal-body').innerHTML = `
     <div class="exercise-question">${escapeHtml(questionText)}</div>
