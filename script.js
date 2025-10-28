@@ -2,6 +2,7 @@ function isMongolian(text) {
   return /[\u0400-\u04FF]/.test(text);
 }
 
+// obviously when we publish it the lemmas will be on sql
 const dictionary = {
   en: {
     "apple": {
@@ -862,7 +863,6 @@ function renderEntry(lemma, entry, direction) {
 
       const translationClass = isMongolian(senseData.translation) ? 'mongolian' : '';
 
-      // ✅ FIXED: Get topic from sense OR entry
       const sensePos = senseData.pos || (entry.senses ? entry.senses[0]?.pos : entry.pos);
       const senseTopic = senseData.topic || entry.topic;
 
@@ -932,7 +932,6 @@ function renderEntry(lemma, entry, direction) {
 
     const translationClass = isMongolian(senseData.translation) ? 'mongolian' : '';
 
-    // ✅ FIXED: Get topic from sense OR entry
     const sensePos = senseData.pos || entry.pos;
     const senseTopic = senseData.topic || entry.topic;
 
@@ -967,7 +966,6 @@ function renderEntry(lemma, entry, direction) {
     frequencyHtml = '<div class="frequency-placeholder">Frequency: top 1000</div>';
   }
 
-  // CEFR tag for Mongolian lemmas
   let cefrHtml = '';
   if (isHeadwordMongolian && entry.cefr) {
     cefrHtml = `<div class="tags-container" style="position:absolute; right:0; top:0;"><button class="level-tag" onclick="showFilterList('cefr', '${entry.cefr}')">${entry.cefr.toUpperCase()}</button></div>`;
